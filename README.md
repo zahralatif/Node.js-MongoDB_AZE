@@ -23,3 +23,39 @@ Məlumat, sözlər, rəqəmlər və ya hətta şəkillər formasında faktların
 
 ---------------------------------------------------------------------
 
+### Əlaqəli Məlumat Bazaları (Relational Databases)
+
+Əlaqəli məlumat bazası məlumatı cədvəl quruluşunda təşkil edir, burada cədvəllər ortaq məlumat elementləri əsasında əlaqələndirilə bilər. Bu cədvəllər sətir və sütunlardan ibarətdir, sətirlar qeydləri, sütunlar isə atributları təmsil edir. Məsələn, şirkətdə hər bir müştəri haqqında məlumatları saxlayan **Müştəri Cədvəli**ni nəzərdən keçirək. Sütunlara Müştəri ID, Müştəri Adı, Müştəri Ünvanı və Müştəri Əsas Telefonu daxil ola bilər və hər sətir müştəri qeydini təmsil edir.
+
+Əlaqəli məlumat bazasındakı cədvəllər ortaq sahələr vasitəsilə əlaqələndirilə bilər. Məsələn, bir şirkət hər bir müştəri ilə bağlı əməliyyat məlumatlarını ehtiva edən **Əməliyyat Cədvəli**nə də malik ola bilər. Bu cədvəl Əməliyyat Tarixi, Müştəri ID, Əməliyyat Məbləği və Ödəniş Metodu kimi sütunları ehtiva edə bilər. **Müştəri Cədvəli** və **Əməliyyat Cədvəli** ortaq Müştəri ID sahəsi ilə əlaqələndirilə bilər, bu da xüsusi bir dövr ərzində bütün əməliyyatları ümumiləşdirən müştəri hesabatları kimi hərtərəfli hesabatlar hazırlamaq üçün sorğulara imkan verir.
+
+Cədvəllərin ortaq məlumatlara əsaslanaraq əlaqələndirilə bilməsi əlaqəli məlumat bazalarının güclü xüsusiyyətidir. Bu, bir və ya daha çox cədvəldə mövcud məlumatlardan yeni cədvəllərin tək bir sorğu vasitəsilə çıxarılmasına, fikirlərin yaranmasına və daha yaxşı qərar verməyə dəstək olur. Əlaqəli məlumat bazaları **Structured Query Language (SQL)**-dən məlumatların sorğulanması üçün istifadə edir.
+
+Əlaqəli məlumat bazaları, məlumatların yaxşı müəyyən edilmiş struktur və sxemə malik olan sətir və sütunlar şəklində təşkil edildiyi düz faylların, məsələn, elektron cədvəllərin təşkilat prinsiplərinə əsaslanır. Bununla belə, elektron cədvəllərdən fərqli olaraq, əlaqəli məlumat bazaları böyük məlumat həcmlərinin optimallaşdırılmış saxlanması, əldə edilməsi və emalı üçün nəzərdə tutulmuşdur. Əlaqəli məlumat bazasındakı hər bir cədvəlin unikal sətir və sütun dəsti var və cədvəllər arasındakı əlaqələr məlumatın təkrarlanmasını minimuma endirir.
+
+Bundan əlavə, əlaqəli məlumat bazaları məlumat sahələrini xüsusi məlumat növləri və dəyərləri ilə məhdudlaşdırmaqla məlumatların uyğunluğunu və bütövlüyünü təmin edir. SQL milyonlarla qeydiyyatı emal etməyə və böyük miqdarda məlumatı tez bir zamanda çıxarmağa imkan verir. Əlaqəli məlumat bazalarının təhlükəsizlik arxitekturası məlumatlara nəzarətli giriş təmin edir və məlumatların idarəedilməsi standartlarına və siyasətlərinə uyğunluğu təmin edir.
+
+Əlaqəli məlumat bazaları kiçik masaüstü sistemlərdən tutmuş geniş miqyaslı bulud əsaslı sistemlərə qədər müxtəlif formalarda ola bilər. Onlar açıq mənbəli və daxili dəstəklənən, açıq mənbəli kommersiya dəstəyi ilə və ya kommersiya qapalı mənbəli sistemlər ola bilər. Populyar əlaqəli məlumat bazalarına **IBM DB2, Microsoft SQL Server, MySQL, Oracle Database** və **PostgreSQL** daxildir. **Database-as-a-Service (DBaaS)** kimi tanınan bulud əsaslı əlaqəli məlumat bazaları, buludun məhdudiyyətsiz hesablama və saxlama imkanlarına çıxışına görə getdikcə daha çox populyarlaşır. Qeyd edilən bulud əlaqəli məlumat bazalarına **Amazon Relational Database Service (RDS), Google Cloud SQL, IBM DB2 on Cloud, Oracle Cloud** və **SQL Azure** daxildir.
+
+Əlaqəli məlumat bazalarının bir neçə üstünlüyü var:
+
+1. **Mənalı Məlumat Yaratma (Creating Meaningful Information)**: Cədvəlləri birləşdirmək qabiliyyəti mənalı məlumat yaratmağa imkan verir.
+2. **Elastiklik (Flexibility)**: SQL yeni sütunlar, cədvəllər əlavə etməyə və digər dəyişikliklər etməyə imkan verir, məlumat bazası işlək vəziyyətdə olarkən belə.
+3. **Redundantlığın Azaldılması (Reduced Redundancy)**: Məlumat redundantlığı minimuma endirilir, müştəri məlumatları Müştəri Cədvəlində bir dəfə saxlanılır və Əməliyyat Cədvəlində əlaqələndirilir.
+4. **Ehtiyat Nüsxə və Fəlakətdən Qurtarma Asanlığı (Ease of Backup and Disaster Recovery)**: Əlaqəli məlumat bazaları asan ixrac və idxal variantlarını dəstəkləyir və bulud əsaslı sistemlərdə davamlı güzgüləmə təmin edir.
+5. **ACID Uyğunluğu (ACID Compliance)**: Əlaqəli məlumat bazaları məlumatların dəqiqliyini və uyğunluğunu təmin edən **ACID (Atomicity, Consistency, Isolation, Durability)** prinsiplərinə əməl edir.
+
+**Əlaqəli Məlumat Bazalarının İstifadə Halları**:
+- **Online Transaction Processing (OLTP)**: Əməliyyat yönümlü tapşırıqlar üçün yaxşı uyğun gəlir, çox sayda istifadəçi və tez-tez sorğular və yeniləmələrə uyğun gəlir.
+- **Data Warehouses**: Biznes zəkası üçün tarixi məlumatları təhlil edən **Online Analytical Processing (OLAP)** üçün optimallaşdırılmışdır.
+- **IoT Həlləri**: Sürət və kənar cihazlardan məlumat toplama və emal etmə qabiliyyəti tələb edir.
+
+**RDBMS-in Məhdudiyyətləri**:
+- Yarı-strukturlaşdırılmış və ya strukturlaşdırılmamış məlumatlar üçün uyğun deyil.
+- RDBMS arasında köçürmə üçün eyni sxemlər və məlumat növləri tələb edir.
+- Məhdud məlumat sahəsinin uzunluğu məlumatların saxlanmasını məhdudlaşdıra bilər.
+
+Bu məhdudiyyətlərə baxmayaraq, əlaqəli məlumat bazaları böyük məlumatlar, bulud hesablama, IoT cihazları və sosial medianın dövründə strukturlaşdırılmış məlumatlar üçün dominant texnologiya olaraq qalır.
+
+---------------------------------------------------------------------------------
+
