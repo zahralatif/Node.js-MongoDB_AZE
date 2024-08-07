@@ -59,3 +59,22 @@ Bu məhdudiyyətlərə baxmayaraq, əlaqəli məlumat bazaları böyük məlumat
 
 ---------------------------------------------------------------------------------
 
+### Əlaqəli Məlumat Konsepsiyaları (Relational Data Concepts)
+
+Əlaqəli model məlumat bazaları üçün ən çox istifadə olunan məlumat modelidir, çünki bu, məlumat müstəqilliyinə imkan verir. Məlumatlar sadə quruluşda, yəni cədvəllərdə saxlanılır ki, bu da məntiqi, fiziki və saxlama müstəqilliyini təmin edir. Əlaqəli məlumat modelinə alternativ olaraq, model-əlaqə (ER entity-relationship) məlumat modeli istifadə olunur.
+
+Sadələşdirilmiş kitabxana məlumat bazası nümunəsini istifadə edərək, model-əlaqə diaqramı (ERD) modellərı (cədvəlləri) və onların əlaqələrini təmsil edə bilər. Kitabxana nümunəsində kitablar var. Kitab bir və ya bir çox müəllif tərəfindən yazıla bilər. Kitabxana bir və ya bir çox kitab nüsxəsinə sahib ola bilər və hər bir nüsxə eyni vaxtda yalnız bir borcalan tərəfindən borc götürülə bilər.
+
+ER modeli məlumat bazasını müstəqil model kimi istifadə etməkdən çox, modellər toplusu kimi görməyi təklif edir. Əlaqəli məlumat bazalarını dizayn etmək üçün vasitə kimi istifadə olunur. ER modelində modellər məlumat bazasındakı digər modellərdən müstəqil olaraq mövcud olan obyektlərdir. ER diaqramının quruluş elementləri modellər və atributlardır.
+
+Model adətən isim olur: şəxs, yer və ya əşya. ER diaqramında model düzbucaqlı olaraq təsvir edilir. Modellərin atributları olur, yəni modeli xarakterizə edən və onun haqqında daha çox məlumat verən məlumat elementləri. ER diaqramında atributlar oval şəkilində təsvir edilir.
+
+Sadələşdirilmiş kitabxana nümunəsini istifadə edərək, "kitab" modeldir. Kitab modelinin atributlarına kitab adı, nəşr və nəşr ili daxil ola bilər. Atributlar tam olaraq bir modelə bağlıdır. Kitab modeli məlumat bazasında cədvəl olduqda, atributlar cədvəlin sütunları olur. Cədvəl sətirlər və sütunların birləşməsindən ibarətdir və xəritələşdirmə zamanı model cədvələ çevrilir, lakin hələ də sətir və sütunlar şəklini almır. Atributlar sütunlara çevrilir və sonradan hər sütuna məlumat dəyərləri əlavə edilir, beləliklə cədvəl forması tamamlanır.
+
+Hər bir atribut müxtəlif formatlarda məlumat dəyərləri saxlayır, məsələn, simvollar, rəqəmlər, tarixlər və valyuta. Kitab cədvəli nümunəsində, başlıq simvollardan ibarət ola bilər və dəyişkən simvol məlumat növü olaraq təyin edilir: Varchar. Uzunluğu dəyişməyən simvol sütunları üçün Char istifadə olunur. Nəşr və il sütunları rəqəmlər olardı, ISBN sütunu isə rəqəmlərlə yanaşı tirelər də ehtiva etdiyinə görə Char ola bilər.
+
+Kitab modeli xəritələşdirmə nümunəsini istifadə edərək, müəllif, müəllif siyahısı, borcalan, borc və nüsxə kimi model adlarından istifadə edərək sadələşdirilmiş kitabxana nümunəmiz üçün cədvəllər yarada bilərik. Model atributları bu cədvəllərin sütunları olacaq. Hər cədvələ təkrarları qarşısını alan və cədvəllər arasında əlaqələri müəyyən edən, hər bir sətiri unikal olaraq müəyyən edən əsas açar təyin olunur. Cədvəllər həmçinin digər cədvəllərdə müəyyən edilən əsas açarları olan xarici açarları da ehtiva edə bilər ki, bu da cədvəllər arasında əlaqələri yaradır.
+
+Əlaqəli modelin əsas üstünlüyü məntiqi, fiziki məlumat müstəqilliyi və saxlama müstəqilliyidir. Modellər çoxsaylı xüsusiyyətlərə malik müstəqil obyektlərdir. Əlaqəli məlumat bazasına xəritələşdirərkən modellər cədvəl kimi təmsil olunur və atributlar sütunlara xəritələnir. Ümumi məlumat növlərinə Char və Varchar kimi simvollar, tam ədədlər və onluq kimi rəqəmlər və tarix və vaxtı əhatə edən vaxt möhürləri daxildir. Əsas açar cədvəldə xüsusi bir sətiri unikal olaraq müəyyən edir və məlumatın təkrar olunmasının qarşısını alır.
+
+--------------------------------------------------------------------------
